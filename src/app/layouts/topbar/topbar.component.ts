@@ -9,6 +9,7 @@ import { AuthenticationService } from '../../core/services/auth.service';
 import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
 import { TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
