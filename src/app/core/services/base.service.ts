@@ -105,7 +105,7 @@ export class BaseService {
     service: any,
     route: ActivatedRouteSnapshot,
     url: string
-  ): Observable<ApiObjectData | null | undefined>{
+  ): Observable<ApiObjectData |null>{
     if (route.params.type === 'edit' || route.params.type === 'view') {
       return this.observnav(service.get(route.params.id), [
         url,
