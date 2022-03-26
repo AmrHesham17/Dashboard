@@ -36,7 +36,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.menuItems = MENU;
-    
     this.isSidebar = SIDEBAR_COLOR;
     if(this.isSidebar === 'dark') {
       document.body.setAttribute('data-sidebar', 'dark');

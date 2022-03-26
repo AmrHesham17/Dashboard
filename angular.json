@@ -1,7 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "220950e1-7d77-4021-8822-d2cd40b3b4a0"
+    "analytics": "220950e1-7d77-4021-8822-d2cd40b3b4a0",
+    "defaultCollection": "@angular-eslint/schematics"
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -10,10 +11,10 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss","prefix": ""
         },
         "@schematics/angular:application": {
-          "strict": true
+          "strict": true,"prefix": ""
         }
       },
       "root": "",
@@ -24,7 +25,11 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "rxjs", "core-js", "simplebar", "ng5-slider", "apexcharts"
+              "rxjs",
+              "core-js",
+              "simplebar",
+              "ng5-slider",
+              "apexcharts"
             ],
             "outputPath": "dist/Dashbord-Amr",
             "index": "src/index.html",
@@ -39,10 +44,10 @@
               "src/styles.scss",
               "src/assets/scss/bootstrap.scss",
               "src/assets/scss/app.scss",
-              "src/assets/scss/icons.scss"
+              "src/assets/scss/icons.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": [
-            ],
+            "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
             "buildOptimizer": false,
@@ -124,6 +129,15 @@
             "production": {
               "devServerTarget": "Dashbord-Amr:serve:production"
             }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }

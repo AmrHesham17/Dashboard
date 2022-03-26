@@ -17,6 +17,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LayoutsModule } from './layouts/layouts.module';
 import { PagesModule } from './pages/pages.module';
 
+import { BlockUIModule } from 'ng-block-ui';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 if (environment.defaultauth === 'firebase') {
   initFirebaseBackend(environment.firebaseConfig);
 } else {
@@ -39,6 +43,7 @@ export function createTranslateLoader(http: HttpClient): any {
         deps: [HttpClient]
       }
     }),
+    BlockUIModule.forRoot(),
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
@@ -48,7 +53,9 @@ export function createTranslateLoader(http: HttpClient): any {
     NgbPopoverModule,
     NgbNavModule,
     LayoutsModule,
-    TranslateModule
+    TranslateModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

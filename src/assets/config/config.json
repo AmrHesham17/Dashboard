@@ -1,0 +1,5 @@
+{
+    "baseUrl": "localhost:7070/",
+    "appUrl": "http://localhost:7070/",
+    "baseReportURL" : "http://localhost:29274/"
+ }
