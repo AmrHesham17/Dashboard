@@ -9,6 +9,7 @@
           <ng-container *ngFor="let item of menuItems">
             <li class="menu-title" *ngIf="item.isTitle">{{ item.label | translate }}</li>
 
+            <!-- First Level -->
             <li *ngIf="!item.isTitle && !item.isLayout">
               <a *ngIf="hasItems(item)" href="javascript:void(0);" class="is-parent"
                 [ngClass]="{'has-arrow': !item.badge, 'has-dropdown': item.badge}">
@@ -27,6 +28,8 @@
                   translate}}</span>
               </a>
 
+              <!-- Second Level -->
+
               <ul *ngIf="hasItems(item)" class="sub-menu" aria-expanded="false">
                 <li *ngFor="let subitem of item.subItems">
                   <a [routerLink]="subitem.link" *ngIf="!hasItems(subitem)" class="side-nav-link-ref"
@@ -37,6 +40,8 @@
                     [attr.data-parent]="subitem.parentId">
                     {{ subitem.label | translate}}
                   </a>
+
+                  <!-- Third Level -->
                   <ul *ngIf="hasItems(subitem)" class="sub-menu mm-collapse" aria-expanded="false">
                     <li *ngFor="let subSubitem of subitem.subItems">
                       <a [attr.data-parent]="subSubitem.parentId" [routerLink]="subSubitem.link"

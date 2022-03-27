@@ -36,8 +36,9 @@
             <!-- App Search-->
             <form class="app-search d-none d-lg-block">
                 <div class="position-relative">
-                    <input type="text" class="form-control searchInput" placeholder="{{'HEADER.SEARCH' | translate}}">
-                    <span class="mdi mdi-magnify"></span>
+                    <input id="searchInput" type="text" class="form-control searchInput" placeholder="{{'HEADER.SEARCH' | translate}}">
+                    <span *ngIf="!serachOpen" class="mdi mdi-magnify" (click)="openSearch()"></span>
+                    <span *ngIf="serachOpen" class="mdi mdi-magnify" (click)="closeSearch()"></span>
                 </div>
             </form>
         </div>

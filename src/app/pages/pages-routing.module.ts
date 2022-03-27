@@ -17,7 +17,7 @@ const routes: Routes = [
         path: 'lookUps',
         component: LookupsComponent,
         resolve: {
-          lookups: LookUpsResolver
+          // lookups: LookUpsResolver
         }
       }
     ]

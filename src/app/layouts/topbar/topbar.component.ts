@@ -26,6 +26,7 @@ export class TopbarComponent implements OnInit {
   countryName: any;
   valueset: any;
   dir:boolean=true;
+  serachOpen:boolean = false;
 
   constructor(@Inject(DOCUMENT) private document: any,
     private router: Router,
@@ -144,5 +145,19 @@ export class TopbarComponent implements OnInit {
     this.translate.use('ar');
     this.dir = true;
   }
+
+  openSearch() {
+    const elm = document.querySelector<HTMLElement>('.searchInput')!;
+    elm.style.width = '100%';
+    this.serachOpen = true;
+  }
+
+  closeSearch() {
+    const elm = document.querySelector<HTMLElement>('.searchInput')!;
+    elm.style.width = '10px';
+    this.serachOpen = false;
+  }
+
+
 
 }
