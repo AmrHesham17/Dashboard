@@ -39,6 +39,8 @@
     "angularx-flatpickr": "^6.6.0",
     "apexcharts": "^3.26.2",
     "bootstrap": "^5.1.1",
+    "devextreme": "21.2.6",
+    "devextreme-angular": "21.2.6",
     "firebase": "^8.6.2",
     "flatpickr": "^4.6.9",
     "metismenujs": "^1.2.1",
