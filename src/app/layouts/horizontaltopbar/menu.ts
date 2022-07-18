@@ -2,12 +2,6 @@ import { MenuItem } from './menu.model';
 
 export const MENU: MenuItem[] = [
     {
-        id: 1,
-        label: 'MENUITEMS.DASHBOARDS.TEXT',
-        icon: 'bx bxs-dashboard',
-        link: '',
-    },
-    {
         id: 9,
         label: 'MENUITEMS.HR.TEXT',
         icon: 'bx bxs-grid',
