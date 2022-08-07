@@ -5,6 +5,8 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { MENU } from './menu';
 import { MenuItem } from './menu.model';
+import { NewMenuItem } from './newmenu.model';
+import { NewMenu } from './menu';
 
 import { SIDEBAR_COLOR } from '../layouts.model';
 
@@ -22,6 +24,8 @@ export class SidebarComponent implements OnInit {
   @ViewChild('sideMenu') sideMenu!: ElementRef;
   menu: any;
   menuItems: MenuItem[] = [];
+  newmenu: any;
+  newMenuItems: NewMenuItem[] = [];
 
   isSidebar: any;
 
@@ -36,6 +40,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.menuItems = MENU;
+    // this.newMenuItems = NewMenu;
     this.isSidebar = SIDEBAR_COLOR;
     if(this.isSidebar === 'dark') {
       document.body.setAttribute('data-sidebar', 'dark');
@@ -47,6 +52,7 @@ export class SidebarComponent implements OnInit {
    */
   initialize(): void {
     this.menuItems = MENU;
+    // this.newMenuItems = NewMenu;
   }
 
   /***
@@ -54,6 +60,7 @@ export class SidebarComponent implements OnInit {
    */
   ngAfterViewInit() {
     this.menu = new MetisMenu('#side-menu');
+    // this.newmenu = new MetisMenu('#side-menu');
     this._activateMenuDropdown();
   }
 
@@ -64,6 +71,20 @@ export class SidebarComponent implements OnInit {
   hasItems(item: MenuItem) {
     return item.subItems !== undefined ? item.subItems.length > 0 : false;
   }
+
+
+
+  // hasItemstype(item: NewMenuItem) {
+  //   return item.type === 'group'
+  // }
+
+  // hasItemTypeSub(item: NewMenuItem) {
+  //   return item.type === 'collapse'
+  // }
+
+  // hasItemsub(item: NewMenuItem) {
+  //   return item.type === 'item'
+  // }
 
   /**
    * remove active and mm-active class

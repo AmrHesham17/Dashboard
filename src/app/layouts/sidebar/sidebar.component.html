@@ -1,15 +1,65 @@
+<!-- ========== Left Sidebar Start ==========
+<div class="vertical-menu">
+  <div data-simplebar class="h-100">
+    <ngx-simplebar style="max-height: 100vh">
+      <div id="sidebar-menu">
+        <ul class="metismenu list-unstyled" id="side-menu">
+          <ng-container *ngFor="let item of newMenuItems">
+            <li>
+              <a *ngIf="hasItemstype(item)" href="javascript:void(0);" class="is-parent">
+                <i class="bx {{item.icon}}" *ngIf="item.icon"></i>
+                <span> {{ item.label | translate }}</span>
+              </a>
+
+              <a [routerLink]="item.link" *ngIf="!hasItemstype(item)" class="side-nav-link-ref"
+                routerLinkActive="active">
+                <i class="bx {{ item.icon }}" *ngIf="item.icon"></i>
+                <span> {{ item.label | translate }}</span>
+              </a>
+
+
+              <ul *ngIf="hasItemTypeSub(item)" class="sub-menu" aria-expanded="false">
+                <li *ngFor="let subitem of newMenuItems">
+                  <a [routerLink]="subitem.link" *ngIf="!hasItemstype(subitem)" class="side-nav-link-ref"
+                    [attr.data-parent]="subitem.parentId" routerLinkActive="active">
+                    {{ subitem.label | translate}}
+                  </a>
+
+                  <a *ngIf="hasItemstype(subitem)" class="side-nav-link-a-ref has-arrow" href="javascript:void(0);"
+                    [attr.data-parent]="subitem.parentId">
+                    {{ subitem.label | translate}}
+                  </a>
+
+                  <ul *ngIf="hasItemsub(subitem)" class="sub-menu mm-collapse" aria-expanded="false">
+                    <li *ngFor="let subSubitem of newMenuItems">
+                      <a [attr.data-parent]="subSubitem.parentId" [routerLink]="subSubitem.link"
+                        routerLinkActive="active" class="side-nav-link-ref">
+                        {{ subSubitem.label | translate }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </ngx-simplebar>
+  </div>
+</div> -->
+
 <!-- ========== Left Sidebar Start ========== -->
 <div class="vertical-menu">
   <div data-simplebar class="h-100">
     <ngx-simplebar style="max-height: 100vh">
-      <!--- Sidemenu -->
+
       <div id="sidebar-menu">
-        <!-- Left Menu Start -->
+
         <ul class="metismenu list-unstyled" id="side-menu">
           <ng-container *ngFor="let item of menuItems">
-            <!-- <li class="menu-title" *ngIf="item.isTitle">{{ item.label | translate }}</li> -->
 
-            <!-- First Level -->
+
+
             <li>
               <a *ngIf="hasItems(item)" href="javascript:void(0);" class="is-parent">
                 <i class="bx {{item.icon}}" *ngIf="item.icon"></i>
@@ -21,7 +71,7 @@
                 <span> {{ item.label | translate }}</span>
               </a>
 
-              <!-- Second Level -->
+
 
               <ul *ngIf="hasItems(item)" class="sub-menu" aria-expanded="false">
                 <li *ngFor="let subitem of item.subItems">
@@ -34,7 +84,7 @@
                     {{ subitem.label | translate}}
                   </a>
 
-                  <!-- Third Level -->
+
                   <ul *ngIf="hasItems(subitem)" class="sub-menu mm-collapse" aria-expanded="false">
                     <li *ngFor="let subSubitem of subitem.subItems">
                       <a [attr.data-parent]="subSubitem.parentId" [routerLink]="subSubitem.link"
@@ -49,8 +99,6 @@
           </ng-container>
         </ul>
       </div>
-      <!-- Sidebar -->
     </ngx-simplebar>
   </div>
 </div>
-<!-- Left Sidebar End -->
