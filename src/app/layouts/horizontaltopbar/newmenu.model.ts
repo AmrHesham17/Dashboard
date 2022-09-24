@@ -8,4 +8,3 @@ export interface NewMenuItem {
     id: number;
     // isParent: boolean;
 }
-

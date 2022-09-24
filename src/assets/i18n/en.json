@@ -27,7 +27,7 @@
       "MESSAGES": "Messages",
       "LOGOUT": "Logout"
     }
-  }, 
+  },
   "ThemeCustomizer": "Theme Customizer",
   "RIGHTSIDEBAR": {
     "LAYOUT": {
@@ -81,7 +81,7 @@
         "BRAND": "Brand"
       }
     }
-  },   
+  },
   "MENUITEMS": {
     "MENU": {
       "TEXT": "Menu"
@@ -95,6 +95,13 @@
         "PAGES": "Pages",
         "SETTINGS":"Settings",
         "REPORTS":"Reports",
+        "EMPLOYEEREPORT":"Employee Reports",
+        "ACCONTREPORT":"Account Reports",
+        "STORE":"Store",
+        "Enterprise":"Enterprise",
+        "BRANCH":"Branch",
+        "MANAGEMENTS":"Mangments",
+        "JobApplication":"Job Application",
         "SUB": {
           "INBOX": "Inbox",
           "READEMAIL": "Read Email"
@@ -191,7 +198,7 @@
           }
         }
       }
-    }  
-    
+    }
+
   }
 }

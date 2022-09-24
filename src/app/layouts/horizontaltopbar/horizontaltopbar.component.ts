@@ -4,6 +4,8 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { MENU } from './menu';
 import { MenuItem } from './menu.model';
+import { NewMenuItem } from './newmenu.model';
+import { NewMenu } from './menu';
 
 import { TranslateService } from '@ngx-translate/core';
 import { CookieService } from 'ngx-cookie-service';
@@ -27,8 +29,11 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
   valueset:any;
   dir:boolean=true;
 
-  constructor(@Inject(DOCUMENT) private document: any, 
-  private router: Router, 
+  newmenu: any;
+  newMenuItems: NewMenuItem[] = [];
+
+  constructor(@Inject(DOCUMENT) private document: any,
+  private router: Router,
   public translate: TranslateService,
   public languageService: LanguageService,
   public _cookiesService: CookieService,
@@ -69,16 +74,17 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
    * Initialize
    */
   initialize(): void {
-    this.menuItems = MENU;
+    // this.menuItems = MENU;
+        this.newMenuItems = NewMenu;
   }
 
   /**
    * Returns true or false if given menu item has child or not
    * @param item menuItem
    */
-  hasItems(item: MenuItem) {
-    return item.subItems !== undefined ? item.subItems.length > 0 : false;
-  }
+  // hasItems(item: MenuItem) {
+  //   return item.subItems !== undefined ? item.subItems.length > 0 : false;
+  // }
 
   /**
    * on settings button clicked from topbar
@@ -211,4 +217,7 @@ export class HorizontaltopbarComponent implements OnInit, AfterViewInit {
     this.translate.use('ar');
     this.dir = true;
   }
+
+
+
 }

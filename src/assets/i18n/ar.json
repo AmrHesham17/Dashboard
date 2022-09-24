@@ -95,6 +95,13 @@
             "PAGES": "الصفحات",
             "SETTINGS":"الاعدادات",
             "REPORTS":"التقارير",
+            "EMPLOYEEREPORT":"بيانات الموظفين",
+            "ACCONTREPORT":"بيانات الحسابات",
+            "STORE":"المخازن",
+            "Enterprise":"المؤسسة",
+            "BRANCH":"الفروع",
+            "MANAGEMENTS":"الإدارات",
+            "JobApplication":"التقدم لوظيفة",
             "SUB": {
               "INBOX": "انبوكس",
               "READEMAIL": "البريد الالكتروني"

@@ -39,8 +39,8 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.menuItems = MENU;
-    // this.newMenuItems = NewMenu;
+    // this.menuItems = MENU;
+    this.newMenuItems = NewMenu;
     this.isSidebar = SIDEBAR_COLOR;
     if(this.isSidebar === 'dark') {
       document.body.setAttribute('data-sidebar', 'dark');
@@ -51,8 +51,8 @@ export class SidebarComponent implements OnInit {
    * Initialize
    */
   initialize(): void {
-    this.menuItems = MENU;
-    // this.newMenuItems = NewMenu;
+    // this.menuItems = MENU;
+    this.newMenuItems = NewMenu;
   }
 
   /***
@@ -67,10 +67,12 @@ export class SidebarComponent implements OnInit {
   /**
    * Returns true or false if given menu item has child or not
    * @param item menuItem
+   * @param cat
+   * @param menu
    */
-  hasItems(item: MenuItem) {
-    return item.subItems !== undefined ? item.subItems.length > 0 : false;
-  }
+  // hasItems(item: MenuItem) {
+  //   return item.subItems !== undefined ? item.subItems.length > 0 : false;
+  // }
 
 
 

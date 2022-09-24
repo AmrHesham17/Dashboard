@@ -3,13 +3,22 @@ import { NewMenuItem } from './newmenu.model';
 
 export const NewMenu: NewMenuItem[] = [
     {
+        label: 'الرئيسية',
+        description: '',
+        link: '',
+        icon: '',
+        type: 'group',
+        parentId: null,
+        id: 0,
+    },
+    {
         label: 'الموارد البشرية',
         description: '',
         link: '',
         icon: '',
         type: 'group',
         parentId: null,
-        id: 1
+        id: 1,
     },
     {
         label: 'الإعدادات',
@@ -18,7 +27,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 1,
-        id: 2
+        id: 2,
     },
     {
         label: 'الصفحات',
@@ -27,7 +36,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 1,
-        id: 3
+        id: 3,
     },
     {
         label: 'التقارير',
@@ -36,7 +45,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 1,
-        id: 4
+        id: 4,
     },
     {
         label: 'الحسابات',
@@ -45,7 +54,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'group',
         parentId: null,
-        id: 5
+        id: 5,
     },
     {
         label: 'الإعدادات',
@@ -54,7 +63,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 5,
-        id: 6
+        id: 6,
     },
     {
         label: 'الصفحات',
@@ -63,7 +72,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 5,
-        id: 7
+        id: 7,
     },
     {
         label: 'التقارير',
@@ -72,7 +81,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 5,
-        id: 8
+        id: 8,
     },
     {
         label: 'المخازن',
@@ -81,7 +90,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'group',
         parentId: null,
-        id: 9
+        id: 9,
     },
     {
         label: 'الإعدادات',
@@ -90,7 +99,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 9,
-        id: 10
+        id: 10,
     },
     {
         label: 'الصفحات',
@@ -99,7 +108,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 9,
-        id: 11
+        id: 11,
     },
     {
         label: 'التقارير',
@@ -108,7 +117,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'collapse',
         parentId: 9,
-        id: 12
+        id: 12,
     },
     {
         label: 'المؤسسة',
@@ -117,7 +126,7 @@ export const NewMenu: NewMenuItem[] = [
         icon: '',
         type: 'item',
         parentId: 2,
-        id: 13
+        id: 13,
     },
 
 ];
