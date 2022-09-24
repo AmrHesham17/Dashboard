@@ -1,5 +1,60 @@
 
-<!-- <div class="topnav">
+<div class="topnav">
+    <div class="container-fluid">
+        <nav class="navbar navbar-light navbar-expand-lg topnav-menu active">
+            <div class="collapse navbar-collapse active" id="topnav-menu-content">
+                <ul class="navbar-nav">
+                    <ng-container *ngFor="let item of newMenuItems">
+                        <li class="nav-item dropdown">
+                            <a *ngIf="item.type === 'group' " class="nav-link dropdown-toggle arrow-none"
+                                (click)="onMenuClick($event)" href="javascript: void(0);" id="topnav-components"
+                                role="button">
+                                <i class="bx {{item.icon}} me-1"></i>
+                                {{item.label | translate }}
+                                <div class="arrow-down"></div>
+                            </a>
+                            
+                            <div class="dropdown-menu" aria-labelledby="topnav-dashboard" *ngIf="item.type === 'group'">
+                                <div *ngFor="let subitem of newMenuItems">
+                                    <div class="dropdown" *ngIf="item.id===subitem.parentId && subitem.type === 'collapse'">
+                                        <a class="dropdown-item dropdown-toggle" href="javascript: void(0);"
+                                            (click)="onMenuClick($event)">{{ subitem.label | translate }}
+                                            <!-- <div class="arrow-down"></div> -->
+                                        </a>
+
+                                        <div class="dropdown-menu" *ngIf="subitem.type === 'collapse'">
+                                            <div *ngFor="let subSubitem of newMenuItems">
+                                                <a class="dropdown-item side-nav-link-ref" *ngIf="subitem.id===subSubitem.parentId && subSubitem.type==='item'"
+                                                    href="javascript: void(0);"
+                                                    [routerLink]="subSubitem.link"
+                                                    routerLinkActive="active">{{ subSubitem.label |
+                                                    translate }}</a>
+                                                </div>
+                                        </div>
+                                        
+                                        <!-- <div class="dropdown-menu" *ngIf="subitem.type === 'collapse'">
+                                            <div *ngFor="let subSubitem of newMenuItems">
+                                                <div class="dropdown" *ngIf="subitem.id===subSubitem.parentId && subSubitem.type === 'item'">
+                                                    <a class="dropdown-item dropdown-toggle" href="javascript: void(0);"
+                                                        (click)="onMenuClick($event)">{{ subSubitem.label | translate }}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<!-- 
+<div class="topnav">
     <div class="container-fluid">
         <nav class="navbar navbar-light navbar-expand-lg topnav-menu active">
             <div class="collapse navbar-collapse active" id="topnav-menu-content">
