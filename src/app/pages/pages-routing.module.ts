@@ -7,20 +7,15 @@ import { DashboardsComponent } from './dashboards/dashboards.component';
 
 const routes: Routes = [
   {
-    path: '',
-    children: [
-      {
-        path: '',
-        component: DashboardsComponent
-      },
-      {
-        path: 'lookUps',
-        component: LookupsComponent,
-        resolve: {
-          // lookups: LookUpsResolver
-        }
-      }
-    ]
+    path: 'home',
+    component: DashboardsComponent
+  },
+  {
+    path: 'lookUps',
+    component: LookupsComponent,
+    resolve: {
+      // lookups: LookUpsResolver
+    }
   }
 ];
 
