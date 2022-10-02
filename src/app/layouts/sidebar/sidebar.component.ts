@@ -51,8 +51,8 @@ export class SidebarComponent implements OnInit {
    * Initialize
    */
   initialize(): void {
-    // this.menuItems = MENU;
-    this.newMenuItems = NewMenu;
+    this.menuItems = MENU;
+    // this.newMenuItems = NewMenu;
   }
 
   /***
@@ -70,9 +70,9 @@ export class SidebarComponent implements OnInit {
    * @param cat
    * @param menu
    */
-  // hasItems(item: MenuItem) {
-  //   return item.subItems !== undefined ? item.subItems.length > 0 : false;
-  // }
+  hasItems(item: MenuItem) {
+    return item.subItems !== undefined ? item.subItems.length > 0 : false;
+  }
 
 
 
