@@ -20,6 +20,13 @@ import { LocationResolver, LocationsResolver } from '../core/resolvers/location.
 import { LookupsComponent } from './bs/lookups/lookups.component';
 import { LookupComponent } from './bs/lookup/lookup.component';
 import { LocationsComponent } from './bs/locations/locations.component';
+import { BoxiconsComponent } from './icons/boxicons/boxicons.component';
+import { DripiconsComponent } from './icons/dripicons/dripicons.component';
+import { FontawsomeComponent } from './icons/fontawsome/fontawsome.component';
+import { MaterialdesignComponent } from './icons/materialdesign/materialdesign.component';
+import { BasicComponent } from './tables/basic/basic.component';
+import { ChartsComponent } from './charts/charts.component';
+import { UiComponent } from './ui/ui.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +35,13 @@ import { LocationsComponent } from './bs/locations/locations.component';
     LookupsComponent,
     LookupComponent,
     LocationsComponent,
+    BoxiconsComponent,
+    DripiconsComponent,
+    FontawsomeComponent,
+    MaterialdesignComponent,
+    BasicComponent,
+    ChartsComponent,
+    UiComponent,
   ],
   imports: [
     CommonModule,

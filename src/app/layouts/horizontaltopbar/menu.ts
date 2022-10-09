@@ -193,6 +193,7 @@ export const MENU: MenuItem[] = [
     {
         id: 5,
         label: 'MENUITEMS.HR.LIST.ACCONTREPORT',
+        icon: 'bx bx-happy-alt',
         subItems:[
           {
             id: 6,
@@ -218,6 +219,7 @@ export const MENU: MenuItem[] = [
     {
         id: 9,
         label: 'MENUITEMS.HR.LIST.STORE',
+        icon: '',
         subItems:[
           {
             id: 10,
